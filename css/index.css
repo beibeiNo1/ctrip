@@ -1,0 +1,368 @@
+body {
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    color: #000;
+    background: #f2f2f2;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+
+/* search顶部搜索模块 */
+
+.search_index {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 44px;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    min-width: 320px;
+    max-width: 640px;
+    width: 100%;
+    background-color: #F6F6F6;
+}
+
+.search {
+    position: relative;
+    flex: 1;
+    height: 26px;
+    line-height: 26px;
+    color: #666;
+    font-size: 12px;
+    margin: 9px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding-left: 25px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, .1);
+}
+
+.search::before {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(../images/sprite.png) no-repeat -60px -278px;
+    background-size: 104px auto;
+}
+
+.user {
+    /* position: relative; */
+    width: 44px;
+    text-align: center;
+    color: #2eaae0;
+    font-size: 12px;
+}
+
+.user::before {
+    /* position: absolute;
+    top: 5px;
+    left: 5px; */
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    margin-left: 10px;
+    background: url(../images/sprite.png) no-repeat -59px -192px;
+    background-size: 104px auto;
+}
+
+
+/* focus 焦点图 */
+
+.focus {
+    padding-top: 44px;
+}
+
+.focus img {
+    width: 100%;
+}
+
+
+/* 局部导航 */
+
+.local_nav {
+    height: 64px;
+    background: #fff;
+    display: flex;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.local_nav li {
+    flex: 1;
+}
+
+.local_nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.local_nav a span {
+    font-size: 12px;
+}
+
+.local_nav [class^="nav_icon"] {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url(../images/localnav_bg.png) no-repeat 0px 0px;
+    background-size: 32px;
+    margin-top: 8px;
+}
+
+.local_nav .nav_icon_icon2 {
+    background-position: 0px -32px;
+}
+
+.local_nav .nav_icon_icon3 {
+    background-position: 0px -64px;
+}
+
+.local_nav .nav_icon_icon4 {
+    background-position: 0px -96px;
+}
+
+.local_nav .nav_icon_icon5 {
+    background-position: 0px -128px;
+}
+
+
+/* 主导航 */
+
+nav {
+    margin: 0 4px 3px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.nav_common {
+    display: flex;
+    height: 88px;
+}
+
+.nav_common:nth-child(1) {
+    background: -webkit-linear-gradient(left, #FA5A55, #FA994D);
+}
+
+.nav_common:nth-child(2) {
+    margin: 3px 0;
+    background: -webkit-linear-gradient(left, #4B90ED, #53BCED);
+}
+
+.nav_common:nth-child(3) {
+    background: -webkit-linear-gradient(left, #34C2A9, #6CD559);
+}
+
+.nav_items {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    line-height: 44px;
+    text-align: center;
+}
+
+.nav_items:nth-child(-n+2) {
+    border-right: 1px solid #fff;
+}
+
+.nav_items:nth-child(n+2) a:nth-child(1) {
+    border-bottom: 1px solid #fff;
+}
+
+.nav_items a {
+    flex: 1;
+    color: #fff;
+}
+
+.nav_items:nth-child(1) a {
+    background: url(../images/hotel.png) no-repeat center bottom;
+    background-size: 121px auto;
+}
+
+
+/* 侧导航栏 */
+
+.subnav_entry {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 4px;
+    padding: 5px 0;
+}
+
+.subnav_entry li {
+    flex: 20%;
+}
+
+.subnav_entry li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subnav_entry_icon {
+    width: 28px;
+    height: 28px;
+    background: url(../images/subnav-bg.png) no-repeat 0px 3px;
+    background-size: 24px auto;
+}
+
+.subnav_entry li:nth-child(2) .subnav_entry_icon {
+    background-position: 5px -19px;
+}
+
+
+/* 销售模块 */
+
+.sales_box {
+    position: relative;
+    background-color: #fff;
+    border-top: 1px solid #bbb;
+    margin: 4px;
+}
+
+.sales_hd {
+    height: 44px;
+}
+
+.sales_box h2 {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    text-indent: -999px;
+}
+
+.sales_box h2:after {
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    content: "";
+    display: block;
+    width: 79px;
+    height: 15px;
+    background: url(../images/hot.png) no-repeat 0px -20px;
+    background-size: 79px auto;
+}
+
+.sales_box h2 em {
+    position: absolute;
+    top: 5px;
+    left: 88px;
+    width: 36px;
+    height: 15px;
+    background: url(../images/ad.jpg) no-repeat 0px 0px;
+}
+
+.more {
+    position: absolute;
+    top: 16px;
+    right: 0px;
+    padding: 3px 20px 3px 10px;
+    border-radius: 15px;
+    background: -webkit-linear-gradient(left, #FF506C, #FF6BC6);
+    color: #fff;
+}
+
+.more::after {
+    position: absolute;
+    top: 9px;
+    right: 8px;
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg);
+}
+
+.sales_bd {
+    border-top: 1px solid #ccc;
+}
+
+.row {
+    display: flex;
+}
+
+.row a {
+    flex: 1;
+}
+
+.row a img {
+    width: 100%;
+}
+
+.row:nth-child(n+2) img {
+    border-top: 1px solid #eee;
+}
+
+.row a:nth-child(1) {
+    border-right: 1px solid #eee;
+}
+
+
+/* 底部 */
+
+.footer {
+    height: 50px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.footer ul {
+    display: flex;
+}
+
+.footer ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.footer ul li a {
+    position: relative;
+}
+
+.footer li em {
+    display: block;
+    margin: 5px 0 3px 50%;
+    transform: translateX(-50%);
+    width: 17px;
+    height: 17px;
+    background: url(../images/sprite.png) no-repeat -60px -152px;
+    background-size: 104px auto;
+}
+
+.footer li:nth-child(2) em {
+    background-position: -60px -173px;
+}
+
+.footer li:nth-child(3) em {
+    background-position: -60px -310px;
+}

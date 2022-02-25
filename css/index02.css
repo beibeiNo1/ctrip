@@ -1,0 +1,392 @@
+body {
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    background-color: #f2f2f2;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+img {
+    vertical-align: top;
+}
+
+input {
+    border: 0;
+    outline: none;
+}
+
+img,
+a {
+    -webkit-touch-callout: none;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.goback {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    width: 38px;
+    height: 38px;
+    background: url(../images/back.png) no-repeat;
+    background-size: 38px 38px;
+}
+
+
+/* 顶部搜索框 */
+
+.search_index {
+    height: 44px;
+    background-color: #f6f6f6;
+    display: flex;
+}
+
+.search {
+    position: relative;
+    flex: 1;
+    height: 26px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    margin: 9px;
+    font-size: 12px;
+    color: #666;
+    padding-left: 23px;
+    line-height: 26px;
+}
+
+.search::before {
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: url(../images/sprite.png) no-repeat -60px -278px;
+    background-size: 104px auto;
+}
+
+.user {
+    width: 44px;
+    color: #2eaae0;
+    text-align: center;
+    font-size: 12px;
+}
+
+.user::before {
+    margin: 0 auto;
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    background: url(../images/sprite.png) no-repeat -59px -192px;
+    background-size: 104px auto;
+}
+
+
+/* 焦点图 */
+
+.focus {
+    position: relative;
+    overflow: hidden;
+}
+
+.focus img {
+    width: 100%;
+}
+
+.focus ul {
+    overflow: hidden;
+    width: 500%;
+    margin-left: -100%;
+}
+
+.focus ul li {
+    float: left;
+    width: 20%;
+}
+
+.focus ol li.current {
+    width: 15px;
+}
+
+.focus ol {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    margin: 0;
+}
+
+.focus ol li {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: #f00;
+    border-radius: 2px;
+}
+
+
+/* 局部导航栏 */
+
+.local_nav {
+    display: flex;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 10px 4px 5px;
+}
+
+.local_nav li {
+    flex: 1;
+}
+
+.local_nav li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0 3px;
+}
+
+.local_nav li a span {}
+
+.local_nav [class^="local_nav_icon"] {
+    width: 32px;
+    height: 32px;
+    background: url(../images/localnav_bg.png) 0px 0px;
+    background-size: 32px auto;
+}
+
+.local_nav_icon_icon1 {
+    width: 32px;
+    height: 32px;
+    background-color: pink;
+}
+
+.local_nav .local_nav_icon_icon2 {
+    background-position: 0px -32px;
+}
+
+nav {
+    background-color: #fff;
+    margin: 5px 4px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.nav_common {
+    display: flex;
+}
+
+.nav_items {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 44px;
+}
+
+.nav_items a {
+    flex: 1;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.nav_items:nth-child(n+2) a {
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.nav_items:nth-child(n+2) a:nth-child(2) {
+    border-bottom-color: transparent;
+}
+
+.nav_items:first-child {
+    height: 88px;
+    background: url(../images/hotel.png) no-repeat center bottom;
+    background-size: 121px auto;
+}
+
+.nav_common:nth-child(1) {
+    background: -webkit-linear-gradient(left, #FA5A55, #FA994D);
+}
+
+.nav_common:nth-child(2) {
+    background: -webkit-linear-gradient(left, #4B90ED, #53BCED);
+    margin: 3px 0;
+}
+
+.nav_common:nth-child(3) {
+    background: -webkit-linear-gradient(left, #34C2A9, #6CD559);
+}
+
+
+/* 侧导航栏 */
+
+.subnav_entry {
+    display: flex;
+    margin: 0 4px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.subnav_entry li {
+    flex: 20%;
+}
+
+.subnav_entry a span:nth-child(1) {
+    display: block;
+    margin: 0 auto;
+    width: 28px;
+    height: 28px;
+    background: url(../images/subnav-bg.png) no-repeat 0px 7px;
+    background-size: 24px auto;
+}
+
+.subnav_entry li:nth-child(2) span:nth-child(1) {
+    background-position: 5px -21px;
+}
+
+
+/* 销售模块 */
+
+.sales_box {
+    margin: 4px;
+    border-top: 1px solid #bbb;
+    background-color: #fff;
+}
+
+.sales_hd {
+    position: relative;
+    margin-top: 20px;
+    height: 44px;
+    border-bottom: 1px solid #bbb;
+}
+
+.sales_hd h2 {
+    position: relative;
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+.sales_hd h2::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 79px;
+    height: 15px;
+    background: url(../images/hot.png) no-repeat 0px -20px;
+    background-size: 79px auto;
+}
+
+.sales_hd h2 em {
+    position: absolute;
+    top: 0px;
+    left: 81px;
+    width: 36px;
+    height: 15px;
+    background: url(../images/ad.jpg) no-repeat 0px 0px;
+}
+
+.more {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: -webkit-linear-gradient(left, #FF506C, #FF6BC6);
+    border-radius: 15px;
+    padding: 3px 25px 3px 10px;
+    color: #fff;
+}
+
+.more::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: 12px;
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg);
+}
+
+.row {
+    display: flex;
+}
+
+.row a {
+    flex: 1;
+}
+
+.row a img {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.row a:first-child img {
+    border-right: 1px solid #ddd;
+}
+
+.sales_bd .row:nth-child(2) a {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* 底部  */
+
+.footer {
+    height: 50px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.footer ul {
+    display: flex;
+}
+
+.footer ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.footer ul li a::before {
+    content: "";
+    display: block;
+    margin: 3px auto;
+    width: 17px;
+    height: 17px;
+    background: url(../images/sprite.png) no-repeat -60px -152px;
+    background-size: 104px auto;
+}
+
+.footer ul li:nth-child(2) a::before {
+    background-position: -60px -173px;
+}
+
+.footer ul li:nth-child(3) a::before {
+    background-position: -60px -310px;
+}
